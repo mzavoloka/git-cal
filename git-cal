@@ -32,7 +32,7 @@ $filepath = shift @ARGV;
 #qw(⬚ ▢ ▤ ▣ ⬛)
 
 my @unicode = qw(⬚ ▢ ▤ ▣ ⬛);
-my @colors = ( 237, 139, 40, 190, 1 );
+my @colors = ( 237, 22, 28, 106, 114 );
 my @ascii = ( " ", ".", "o", "O", "0" );
 my @months = qw (Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec);
 
@@ -272,10 +272,10 @@ sub compute_stats {
 sub print_grid {
     my %stat = @_;
 
-    my $space = 6;
+    my $space = 1;
     print_month_names($space);
     foreach my $c ( 0 .. 6 ) {
-        printf "\n%" . ( $space - 2 ) . "s", "";
+        printf "\n";
 
         print $c == 1 ? "M "
             : $c == 3 ? "W "
